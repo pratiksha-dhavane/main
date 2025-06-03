@@ -6,15 +6,15 @@ from sklearn.preprocessing import LabelEncoder, OneHotEncoder, StandardScaler
 import pickle
 
 # Load trained model
-model = tf.keras.models.load_model("model_v1.h5")
+model = tf.keras.models.load_model("ann-churn-classification/model_v1.h5")
 
-with open("label_encoder_gender.pkl","rb") as file:
+with open("ann-churn-classification/label_encoder_gender.pkl","rb") as file:
   label_encoder_gn = pickle.load(file)
 
-with open("label_encoder_geo.pkl","rb") as file:
+with open("ann-churn-classification/label_encoder_geo.pkl","rb") as file:
   ohe_geo = pickle.load(file)
 
-with open("scaler.pkl","rb") as file:
+with open("ann-churn-classification/scaler.pkl","rb") as file:
   scaler= pickle.load(file)
 
 # Streamlit app
